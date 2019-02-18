@@ -174,7 +174,7 @@ It is possible to restrict the type being used, e.g.
 
 ## Variance
 
-Given `A <: B`
+Given `A <: B` (that is, A extends B)
 
 If `C[A] <: C[B]`, `C` is covariant
 
@@ -269,7 +269,7 @@ Pattern matches are also used quite often in anonymous functions:
     })
 ```
 
-Instead of `p => p match { case ... }`, you can simply write `{case ...}`, so the above example becomes more concise:
+Instead of `p => p match { case ... }`, you can simply write `{case ...}`, so the above example becomes more concise (note that the arguments to `map` must now be called inside curly braces `{...}`, not parentheses `(...)`):
 ```scala
     val chars: List[Char] = pairs map {
       case (ch, num) => ch
